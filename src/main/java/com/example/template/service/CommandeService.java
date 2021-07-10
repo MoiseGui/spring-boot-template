@@ -24,5 +24,5 @@ public interface CommandeService {
 	public Commande findByTotalLessThan(BigDecimal prix);
 	public Commande findByTotalBetween(BigDecimal min, BigDecimal max);
 	
-	public Commande findByCommandeItemId(Long idCommandeItem);
+//	public Commande findByCommandeItemId(Long idCommandeItem);
 }

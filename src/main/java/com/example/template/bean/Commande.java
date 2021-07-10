@@ -26,7 +26,7 @@ public class Commande {
 	private Long id;
 	private String ref;
 	@Temporal(TemporalType.DATE)
-	private Date dateCmde;
+	private Date dateCmd;
 	private BigDecimal total;
 	@OneToMany(mappedBy = "commande")
 	private List<CommandeItem> commandeItems;

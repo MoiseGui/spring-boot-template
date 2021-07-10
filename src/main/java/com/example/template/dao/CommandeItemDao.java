@@ -15,5 +15,5 @@ public interface CommandeItemDao extends JpaRepository<CommandeItem, Long> {
 	public List<CommandeItem> findByQteLessThan(BigDecimal qte);
 	public List<CommandeItem> findByQteBetween(BigDecimal qteMin, BigDecimal qteMax);
 	
-	public List<CommandeItem> findByCommandeId(Long idCommande);
+//	public List<CommandeItem> findByCommandeId(Long idCommande);
 }

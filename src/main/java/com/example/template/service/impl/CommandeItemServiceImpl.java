@@ -70,9 +70,9 @@ public class CommandeItemServiceImpl implements CommandeItemService {
 		return this.dao.findByQteBetween(qteMin, qteMax);
 	}
 
-	@Override
-	public List<CommandeItem> findByCommandeId(Long idCommande) {
-		return this.dao.findByCommandeId(idCommande);
-	}
+//	@Override
+//	public List<CommandeItem> findByCommandeId(Long idCommande) {
+//		return this.dao.findByCommandeId(idCommande);
+//	}
 
 }

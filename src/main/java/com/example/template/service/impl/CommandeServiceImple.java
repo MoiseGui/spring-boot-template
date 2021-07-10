@@ -89,9 +89,9 @@ public class CommandeServiceImple implements CommandeService {
 		return this.dao.findByTotalBetween(min, max);
 	}
 
-	@Override
-	public Commande findByCommandeItemId(Long idCommandeItem) {
-		return this.dao.findByCommandeItemId(idCommandeItem);
-	}
+//	@Override
+//	public Commande findByCommandeItemId(Long idCommandeItem) {
+//		return this.dao.findByCommandeItemId(idCommandeItem);
+//	}
 
 }

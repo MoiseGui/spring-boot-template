@@ -18,5 +18,5 @@ public interface CommandeDao extends JpaRepository<Commande, Long> {
 	public Commande findByTotalLessThan(BigDecimal prix);
 	public Commande findByTotalBetween(BigDecimal min, BigDecimal max);
 	
-	public Commande findByCommandeItemId(Long idCommandeItem);
+//	public Commande findByCommandeItemId(Long idCommandeItem);
 }
