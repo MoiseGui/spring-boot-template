@@ -10,6 +10,8 @@ public interface CommandeItemService {
 	public boolean exists(Long id);
 	public List<CommandeItem> findAll();
 	
+	public CommandeItem findById(Long id);
+	
 	public List<CommandeItem> findByProduitId(Long idProduit);
 	
 	public List<CommandeItem> findByQte(BigDecimal qte);

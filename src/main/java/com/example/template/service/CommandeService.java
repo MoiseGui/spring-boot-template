@@ -8,7 +8,7 @@ import com.example.template.bean.Commande;
 
 public interface CommandeService {
 	public void save(Commande commande);
-	public boolean exists(Long id);
+	public boolean existsById(Long id);
 	public List<Commande> findAll();
 	
 	public Commande findById(Long id);

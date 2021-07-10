@@ -7,7 +7,7 @@ import com.example.template.bean.Produit;
 
 public interface ProduitService {
 	public void save(Produit produit);
-	public boolean exists(Long id);
+	public boolean existsById(Long id);
 	public List<Produit> findAll();
 	
 	public Produit findById(Long id);

@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.template.bean.CommandeItem;
 
-public interface CommandeItemDao extends JpaRepository<CommandeItemDao, Long> {
+public interface CommandeItemDao extends JpaRepository<CommandeItem, Long> {
 	public List<CommandeItem> findByProduitId(Long idProduit);
 	
 	public List<CommandeItem> findByQte(BigDecimal qte);
