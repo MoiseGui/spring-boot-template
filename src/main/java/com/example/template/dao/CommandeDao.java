@@ -14,9 +14,9 @@ public interface CommandeDao extends JpaRepository<Commande, Long> {
 	public List<Commande> findByDateCmdAfter(Date date);
 	public List<Commande> findByDateCmdBetween(Date startDate, Date endDate);
 	
-	public Commande findByTotalGreaterThan(BigDecimal prix);
-	public Commande findByTotalLessThan(BigDecimal prix);
-	public Commande findByTotalBetween(BigDecimal min, BigDecimal max);
+	public List<Commande> findByTotalGreaterThan(BigDecimal prix);
+	public List<Commande> findByTotalLessThan(BigDecimal prix);
+	public List<Commande> findByTotalBetween(BigDecimal min, BigDecimal max);
 	
 //	public Commande findByCommandeItemId(Long idCommandeItem);
 }

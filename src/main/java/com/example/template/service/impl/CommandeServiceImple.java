@@ -28,6 +28,24 @@ public class CommandeServiceImple implements CommandeService {
 	}
 
 	@Override
+	public Commande update(Long idCommande, Commande commande) {
+		commande.setId(idCommande);
+		return dao.save(commande);
+	}
+
+	@Override
+	public void delete(Long idCommande) {
+		dao.deleteById(idCommande);
+
+	}
+
+	@Override
+	public void deleteAll() {
+		dao.deleteAll();
+
+	}
+
+	@Override
 	public boolean existsById(Long id) {
 		return this.dao.existsById(id);
 	}
@@ -72,19 +90,19 @@ public class CommandeServiceImple implements CommandeService {
 	}
 
 	@Override
-	public Commande findByTotalGreaterThan(BigDecimal prix) {
+	public List<Commande> findByTotalGreaterThan(BigDecimal prix) {
 		if(prix == null) return null;
 		return this.dao.findByTotalGreaterThan(prix);
 	}
 
 	@Override
-	public Commande findByTotalLessThan(BigDecimal prix) {
+	public List<Commande> findByTotalLessThan(BigDecimal prix) {
 		if(prix == null) return null;
 		return this.dao.findByTotalLessThan(prix);
 	}
 
 	@Override
-	public Commande findByTotalBetween(BigDecimal min, BigDecimal max) {
+	public List<Commande> findByTotalBetween(BigDecimal min, BigDecimal max) {
 		if(min == null || max == null) return null;
 		return this.dao.findByTotalBetween(min, max);
 	}

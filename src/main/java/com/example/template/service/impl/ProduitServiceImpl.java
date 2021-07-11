@@ -26,6 +26,22 @@ public class ProduitServiceImpl implements ProduitService {
 	}
 
 	@Override
+	public Produit update(Long idProduit, Produit produit) {
+		produit.setId(idProduit);
+		return dao.save(produit);
+	}
+
+	@Override
+	public void delete(Long idProduit) {
+		dao.deleteById(idProduit);
+	}
+
+	@Override
+	public void deleteAll() {
+		dao.deleteAll();
+	}
+
+	@Override
 	public boolean existsById(Long id) {
 		return this.dao.existsById(id);
 	}
@@ -56,17 +72,17 @@ public class ProduitServiceImpl implements ProduitService {
 	}
 
 	@Override
-	public Produit findByPrixGreaterThan(BigDecimal prix) {
+	public List<Produit> findByPrixGreaterThan(BigDecimal prix) {
 		return this.dao.findByPrixGreaterThan(prix);
 	}
 
 	@Override
-	public Produit findByPrixLessThan(BigDecimal prix) {
+	public List<Produit> findByPrixLessThan(BigDecimal prix) {
 		return this.dao.findByPrixLessThan(prix);
 	}
 
 	@Override
-	public Produit findByPrixBetween(BigDecimal min, BigDecimal max) {
+	public List<Produit> findByPrixBetween(BigDecimal min, BigDecimal max) {
 		return this.dao.findByPrixBetween(min, max);
 	}
 	

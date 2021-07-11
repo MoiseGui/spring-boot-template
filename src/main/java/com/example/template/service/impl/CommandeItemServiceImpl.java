@@ -27,6 +27,24 @@ public class CommandeItemServiceImpl implements CommandeItemService {
 	}
 
 	@Override
+	public CommandeItem update(Long idCommandeItem, CommandeItem commandeItem) {
+		commandeItem.setId(idCommandeItem);
+		return dao.save(commandeItem);
+	}
+
+	@Override
+	public void delete(Long idCommandeItem) {
+		dao.deleteById(idCommandeItem);
+
+	}
+
+	@Override
+	public void deleteAll() {
+		dao.deleteAll();
+
+	}
+
+	@Override
 	public boolean exists(Long id) {
 		return this.dao.existsById(id);
 	}

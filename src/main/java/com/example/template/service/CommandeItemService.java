@@ -4,9 +4,13 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import com.example.template.bean.CommandeItem;
+import com.example.template.bean.Produit;
 
 public interface CommandeItemService {
 	public void save(CommandeItem commandeItem);
+	public CommandeItem update(Long idCommandeItem,CommandeItem commandeItem);
+	public void delete(Long idCommandeItem);
+	public void deleteAll();
 	public boolean exists(Long id);
 	public List<CommandeItem> findAll();
 	
