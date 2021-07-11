@@ -3,11 +3,13 @@ package com.example.template.dao;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.template.bean.Commande;
 
 public interface CommandeDao extends JpaRepository<Commande, Long> {
-	public Commande findByRef(String ref);
+	public Optional<Commande> findByRef(String ref);
 	
 	public List<Commande> findByDateCmd(Date date);
 	public List<Commande> findByDateCmdBefore(Date date);
